@@ -1,5 +1,6 @@
 import React from 'react';
 import { IoChevronForwardOutline } from "react-icons/io5";
+import Image from 'next/image';
 
 
 const MenuPage: React.FC = () => {
@@ -26,7 +27,7 @@ const MenuPage: React.FC = () => {
           <h2 className="text-2xl font-semibold mb-4 animate-slide-up">Appetizers</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             <div className="flex animate-slide-left">
-              <img src="/images/menu4.jpeg" alt="Appetizer" className="w-24 h-24 object-cover rounded mr-4" />
+              <Image src="/images/menu4.jpeg" alt="Appetizer" className="w-24 h-24 object-cover rounded mr-4" />
               <div>
                 <h3 className="text-lg font-medium">Sandwich</h3>
                 <p className="text-sm text-gray-600">Crispy Sandwitches stuffed with spiced potatoes</p>
@@ -40,7 +41,7 @@ const MenuPage: React.FC = () => {
           <h2 className="text-2xl font-semibold mb-4 animate-slide-up">Main Course</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             <div className="flex animate-slide-left">
-              <img src="/images/menu6.jpeg" alt="Main Course" className="w-24 h-24 object-cover rounded mr-4" />
+              <Image src="/images/menu6.jpeg" alt="Main Course" className="w-24 h-24 object-cover rounded mr-4" />
               <div>
                 <h3 className="text-lg font-medium">Pizza</h3>
                 <p className="text-sm text-gray-600">Served with extra cheese</p>
@@ -55,7 +56,7 @@ const MenuPage: React.FC = () => {
           <h2 className="text-2xl font-semibold mb-4 animate-slide-up">Desserts</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             <div className="flex animate-slide-left">
-              <img src="/images/menu9.jpeg" alt="Dessert" className="w-24 h-24 object-cover rounded mr-4" />
+              <Image src="/images/menu9.jpeg" alt="Dessert" className="w-24 h-24 object-cover rounded mr-4" />
               <div>
                 <h3 className="text-lg font-medium">Chocolate Donut</h3>
                 <p className="text-sm text-gray-600">Rich chocolate donut with a molten center</p>
@@ -70,7 +71,7 @@ const MenuPage: React.FC = () => {
           <h2 className="text-2xl font-semibold mb-4 animate-slide-up">Dinner</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             <div className="flex animate-slide-left">
-              <img src="/images/menu5.jpeg" alt="Drink" className="w-24 h-24 object-cover rounded mr-4" />
+              <Image src="/images/menu5.jpeg" alt="Drink" className="w-24 h-24 object-cover rounded mr-4" />
               <div>
                 <h3 className="text-lg font-medium">Lasania</h3>
                 <p className="text-sm text-gray-600">Fresh Lasania with a juice</p>
@@ -106,11 +107,11 @@ const MenuPage: React.FC = () => {
         <section className="py-12 text-center animate-fade-in">
           <h2 className="text-2xl font-semibold mb-6">We work with the best people</h2>
           <div className="grid grid-cols-3 md:grid-cols-5 gap-6">
-            <img src="/images/chef1.jpeg" alt="Partner 1" className="h-16 mx-auto" />
-            <img src="/images/chef3.jpeg" alt="Partner 2" className="h-16 mx-auto" />
-            <img src="/images/chef2.jpeg" alt="Partner 3" className="h-16 mx-auto" />
-            <img src="/images/sis2.png" alt="Partner 4" className="h-16 mx-auto" />
-            <img src="/images/lady.png" alt="Partner 5" className="h-16 mx-auto" />
+            <Image src="/images/chef1.jpeg" alt="Partner 1" className="h-16 mx-auto" />
+            <Image src="/images/chef3.jpeg" alt="Partner 2" className="h-16 mx-auto" />
+            <Image src="/images/chef2.jpeg" alt="Partner 3" className="h-16 mx-auto" />
+            <Image src="/images/sis2.png" alt="Partner 4" className="h-16 mx-auto" />
+            <Image src="/images/lady.png" alt="Partner 5" className="h-16 mx-auto" />
           </div>
         </section>
       </main>
