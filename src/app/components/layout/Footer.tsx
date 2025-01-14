@@ -3,8 +3,6 @@ import Image from "next/image";
 
 
 
-
-
 import { PiClockClockwiseBold } from "react-icons/pi";
 import { FaFacebookF } from "react-icons/fa";
 import { FaTwitter } from "react-icons/fa";
