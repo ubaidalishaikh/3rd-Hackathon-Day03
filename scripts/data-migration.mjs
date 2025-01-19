@@ -44,9 +44,14 @@ async function importData() {
     $Promise.push(
       axios.get('https://sanity-nextjs-rouge.vercel.app/api/foods')
     );
+    $Promise.push(
+      axios.get('https://sanity-nextjs-rouge.vercel.app/api/chefs')
+    );
 
-    const [foodsResponse] = await Promise.all($Promise);
-    const foods = foodsResponse.data;
+    const [foodsResponse, chefsResponse] = await Promise.all($Promise);
+const foods = foodsResponse.data;
+const chefs = chefsResponse.data;
+
 
     for (const food of foods) {
       console.log(`Processing food: ${food.name}`);
@@ -80,6 +85,38 @@ async function importData() {
       const result = await client.create(sanityFood);
       console.log(`Food uploaded successfully: ${result._id}`);
     }
+    for (const chef of chefs) {
+      console.log(`Processing chef: ${chef.name}`);
+
+      let imageRef = null;
+      if (chef.image) {
+        imageRef = await uploadImageToSanity(chef.image);
+      }
+
+      const sanityChef = {
+        _type: 'chef',
+        name: chef.name,
+        position: chef.position || null,
+        experience: chef.experience || 0,
+        specialty: chef.specialty || '',
+        description: chef.description || '',
+        available: chef.available !== undefined ? chef.available : true,
+        image: imageRef
+          ? {
+              _type: 'image',
+              asset: {
+                _type: 'reference',
+                _ref: imageRef,
+              },
+            }
+          : undefined,
+      };
+
+      console.log('Uploading chef to Sanity:', sanityChef.name);
+      const result = await client.create(sanityChef);
+      console.log(`Chef uploaded successfully: ${result._id}`);
+    }
+
 
     console.log('Data migrated successfully!');
   } catch (error) {
