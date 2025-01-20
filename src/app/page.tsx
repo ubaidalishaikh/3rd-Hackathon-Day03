@@ -7,6 +7,7 @@ import MenuSection from "./menu/page";
 import Testimonial from "./Testimonials/page";
 import LatestBlogs from "./LatestBlogs/page";
 import MeetOurChefs from "./Chefs/page";
+import ProductCards from "./Products/page";
 
 
 
@@ -21,6 +22,7 @@ export default function Home() {
       <MenuSection/>
       <MeetOurChefs/>
       <Testimonial/>
+      <ProductCards/>
       <LatestBlogs/>
       
      
